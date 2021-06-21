@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Jua&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Hammersmith One', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+     color: #e7e7de;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%); 
+    height: 65vh;
+    width: 400px;
+    border-radius: 25px;
+    box-shadow: #000000 0px 10px 25px;
+    align-items: center;
+    transition: 0.5s ease;
+}
+.container:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+    box-shadow: #000000 0px 0px 15px;
+}
+.theme{
+    margin: 3vh;
+    text-shadow: #000000 1PX 1PX 5PX;
+}
+.volver{
+    outline: 0px;
+    border: 0;
+    margin: 3vh;
+    display: flex;
+    height: 4vh;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: ease 0.4s;
+    background-color: #2b256b00;
+    color: white;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px;
+}
+.volver:hover{
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 2px;
+    background-color: white;
+    color: #784BA0;
+    transform: scale(1.1);
+    transition: ease 0.4s;
+}
+.out{
+    content: "SALIR";
+    text-decoration: none;
+    color: white;
+    padding: 75px;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+.out:before{
+    content: "SALIR?";
+    color: #ffffff;
+}
+.out:hover:before{
+    content: "SALIR";
+    color: #784BA0;
+}
+.options{
+    display: flex;
+    flex-direction: row;
+    height: 40vh;
+}
+.elegirmovie{
+    outline: 0px;
+    border: 0;
+    margin: 2vw;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: ease 0.4s;
+    background-image: url("img/movie.jpg");
+    background-size:1000% 150% ;
+    background-position: center;
+    color: white;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px 2px;
+}
+.elegirmovie:hover{
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 50px 2px;
+    background-color: white;
+    background-size: 700% 105% ;
+    color: #784BA0;
+    transform: scale(1.1);
+    transition: ease 0.4s;
+}
+.elegirgame{
+    outline: 0px;
+    border: 0;
+    margin: 2vw;
+    display: flex;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: ease 0.4s;
+    background-image: url("img/game.jpg");
+    background-size:300% 150%;
+    background-position: center;
+    color: white;
+    box-shadow: rgb(0, 0, 0) 0px 0px 10px 2px;
+}
+.elegirgame:hover{
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 2px;
+    background-color: white;
+    background-size: 200% 100%;
+    color: #784BA0;
+    transform: scale(1.1);
+    transition: ease 0.4s;
+}
+.selectgame{
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+    padding-bottom: 17vh;
+    padding-top: 17vh;
+    font-size: 20px;
+    border-radius:25px ;
+}
+.selectgame:hover{
+    font-size: 20px;
+}
+.selectmovie{
+    text-decoration: none;
+    color: white;
+    padding: 50px;
+    padding-bottom: 17vh;
+    padding-top: 17vh;
+    font-size: 20px;
+    border-radius:25px ;
+}
+.selectmovie:hover{
+    font-size: 20px;
+}

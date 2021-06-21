@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Hammersmith+One&family=Jua&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Hammersmith One', sans-serif;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(90deg, hsl(240, 41%, 20%) 0%, hsl(296, 44%, 40%) 100%);
+    color: #e7e7de;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+}
+.respuesta{
+    background-color: hsl(272, 36%, 46%);
+    margin: 10px;
+    width: 50vw;
+    display: flex;
+    cursor: pointer;
+    border-radius: 45px;
+    transition: 0.5s ease;
+}
+.respuesta:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+    background-color: hsl(272, 36%, 56%);
+}
+.letra{
+    padding: 10px;
+}
+.texto{
+    padding: 10px;
+}
+.volver{
+    outline: 0px;
+    border: 0;
+    margin: 3vh;
+    display: flex;
+    height: 4vh;
+    width: 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: ease 0.4s;
+    background-color: #2b256b00;
+    color: white;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px;
+}
+.volver:hover{
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 2px;
+    background-color: white;
+    color: #784BA0;
+    transform: scale(1.1);
+    transition: ease 0.4s;
+}
+.out{
+    text-decoration: none;
+    color: white;
+    padding: 75px;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+.out:before{
+    content: "VOLVER";
+    color: #ffffff;
+}
+.out:hover:before{
+    content: "🢀";
+    color: #784BA0;
+}
