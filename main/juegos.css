@@ -27,6 +27,7 @@ body{
     cursor: pointer;
     border-radius: 45px;
     transition: 0.5s ease;
+
 }
 .respuesta:hover{
     transform: scale(1.1);
@@ -81,4 +82,7 @@ body{
 .puntaje{
     text-align: center;
     width: 80vw;
+}
+.respuestas{
+    pointer-events: auto;
 }

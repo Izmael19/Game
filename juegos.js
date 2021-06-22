@@ -1,5 +1,7 @@
 const pregunta = document.getElementById("pregunta");
 const respuesta = Array.from(document.querySelectorAll(".texto"));
+const ans = document.getElementById("ttt");
+
 
 let preguntas = [{
         pregunta: '¿Cuántos luchadores hay en Street Fighter II?',
@@ -44,12 +46,13 @@ for (let j = 0; j < resp.length; j++) { //colorear
     respuesta[j].parentNode.addEventListener("click", function() {
         y = y + 1;
         if (j == preguntas[y-1].correcta) {
+            ans.style.pointerEvents = "none";
             respuesta[j].parentNode.style.background = "green";
         } else {
             respuesta[j].parentNode.style.background = "red";
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
         };
-        setTimeout(function() {
+        setTimeout(function() { 
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "";
             respuesta[j].parentNode.style.background = "";
             respuesta[preguntas[0].correcta].parentNode.style.background = "";
@@ -61,6 +64,7 @@ for (let j = 0; j < resp.length; j++) { //colorear
                 respuesta[i].innerHTML = opciones[i];
             }
             pregunta.innerHTML = preguntas[y].pregunta;
+            ans.style.pointerEvents = "auto";
         }, 1000);
     })
 }
