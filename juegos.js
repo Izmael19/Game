@@ -43,11 +43,11 @@ let y = 0;
 for (let j = 0; j < resp.length; j++) { //colorear
     respuesta[j].parentNode.addEventListener("click", function() {
         y = y + 1;
-        if (j == preguntas[j].correcta) {
+        if (j == preguntas[y].correcta) {
             respuesta[j].parentNode.style.background = "green";
         } else {
             respuesta[j].parentNode.style.background = "red";
-            respuesta[preguntas[0].correcta].parentNode.style.background = "green";
+            respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
         };
         setTimeout(function() {
             respuesta[j].parentNode.style.background = "";
