@@ -1,6 +1,7 @@
 const pregunta = document.getElementById("pregunta");
 const respuesta = Array.from(document.querySelectorAll(".texto"));
 const ans = document.getElementById("ttt");
+const puntaje = document.getElementById("puntaje");
 
 
 let preguntas = [{
@@ -41,18 +42,20 @@ for (let i = 0; i < 4; i++) {
     respuesta[i].innerHTML = opciones[i];
 } //escribir respuestas 1
 let y = 0;
-
+let x = 0;
 for (let j = 0; j < resp.length; j++) { //colorear
     respuesta[j].parentNode.addEventListener("click", function() {
         y = y + 1;
+        ans.style.pointerEvents = "none";
         if (j == preguntas[y-1].correcta) {
-            ans.style.pointerEvents = "none";
             respuesta[j].parentNode.style.background = "green";
+            x = x + 10;
         } else {
             respuesta[j].parentNode.style.background = "red";
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
         };
         setTimeout(function() { 
+            puntaje.innerHTML = x;
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "";
             respuesta[j].parentNode.style.background = "";
             respuesta[preguntas[0].correcta].parentNode.style.background = "";
