@@ -43,13 +43,14 @@ let y = 0;
 for (let j = 0; j < resp.length; j++) { //colorear
     respuesta[j].parentNode.addEventListener("click", function() {
         y = y + 1;
-        if (j == preguntas[y].correcta) {
+        if (j == preguntas[y-1].correcta) {
             respuesta[j].parentNode.style.background = "green";
         } else {
             respuesta[j].parentNode.style.background = "red";
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
         };
         setTimeout(function() {
+            respuesta[preguntas[y-1].correcta].parentNode.style.background = "";
             respuesta[j].parentNode.style.background = "";
             respuesta[preguntas[0].correcta].parentNode.style.background = "";
             let resp = preguntas[y].respuestas; //array de siguiente pregunta
