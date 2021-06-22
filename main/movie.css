@@ -15,17 +15,22 @@ body{
     height: 100vh;
     align-items: center;
 }
+.pregunta{
+    text-align: center;
+    width: 80vw;
+}
 .respuesta{
     background-color: hsl(272, 36%, 46%);
     margin: 10px;
-    width: 50vw;
+    width: 40vw;
     display: flex;
     cursor: pointer;
     border-radius: 45px;
     transition: 0.5s ease;
+
 }
 .respuesta:hover{
-    transform: scale(1.05);
+    transform: scale(1.1);
     transition: 0.5s ease;
     background-color: hsl(272, 36%, 56%);
 }
@@ -56,7 +61,7 @@ body{
     box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 2px;
     background-color: white;
     color: #784BA0;
-    transform: scale(1.1);
+    transform: scale(1.15);
     transition: ease 0.4s;
 }
 .out{
@@ -73,4 +78,11 @@ body{
 .out:hover:before{
     content: "🢀";
     color: #784BA0;
+}
+.puntaje{
+    text-align: center;
+    width: 80vw;
+}
+.respuestas{
+    pointer-events: auto;
 }
