@@ -50,12 +50,17 @@ for (let j = 0; j < resp.length; j++) { //colorear
         ans.style.pointerEvents = "none";
         if (j == preguntas[y-1].correcta) {
             respuesta[j].parentNode.style.background = "green";
-            x = x + 10;
+            x = x + 20;
+            localStorage.setItem("puntaje", x);
+            
         } else {
             respuesta[j].parentNode.style.background = "red";
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
         };
         setTimeout(function() { 
+            if (y==5) {
+                location="resultados.html";
+            }
             puntaje.innerHTML = x;
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "";
             respuesta[j].parentNode.style.background = "";
@@ -69,6 +74,7 @@ for (let j = 0; j < resp.length; j++) { //colorear
             }
             pregunta.innerHTML = preguntas[y].pregunta;
             ans.style.pointerEvents = "auto";
+         
         }, 1000);
     })
-}
+};

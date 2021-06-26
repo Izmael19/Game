@@ -1,9 +1,9 @@
-
 const button = document.getElementById('enterButton');
 
 
 button.onclick = function() {
-  const name = document.getElementById('name').value;
-  const age = document.getElementById('age').value;
- }
-
+let name = document.getElementById('name').value;
+localStorage.setItem("name", name);
+let  age = document.getElementById('age').value;
+localStorage.setItem("age", age);
+ };
