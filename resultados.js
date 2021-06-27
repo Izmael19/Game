@@ -16,6 +16,6 @@ if (thePuntaje >= 80) {
     }else{
     text.innerHTML = "Lo siento " + theName + " puedes mejorar.";
     }
-}
+};
 nombre.innerHTML = "Tu puntaje es:";
 puntaje.innerHTML = thePuntaje;

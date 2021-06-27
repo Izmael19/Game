@@ -18,3 +18,55 @@ body{
 h1, h2{
     margin: 15px;
 }
+.volver{
+    outline: 0px;
+    border: 0;
+    margin: 1vh;
+    display: block;
+    height: 4vh;
+    width: 175px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    transition: ease 0.4s;
+    background-color: #2b256b00;
+    color: white;
+    box-shadow: rgb(255, 255, 255) 0px 0px 0px 2px;
+}
+.volver:hover{
+    display: block;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 2px;
+    background-color: white;
+    color: #784BA0;
+    transform: scale(1.15);
+    transition: ease 0.4s;
+}
+.opcion1{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+.opcion1:before{
+    content: "VOLVER A JUGAR?";
+    color: #ffffff;
+}
+.opcion1:hover:before{
+    content: "VOLVER A JUGAR?";
+    color: #784BA0;
+}
+.opcion2{
+    text-decoration: none;
+    color: white;
+    padding-bottom: 2vh;
+    padding-top: 2vh;
+}
+.opcion2:before{
+    content: "VOLVER AL INICIO";
+    color: #ffffff;
+}
+.opcion2:hover:before{
+    content: "VOLVER AL INICIO";
+    color: #784BA0;
+}

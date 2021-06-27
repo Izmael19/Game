@@ -3,7 +3,6 @@ const respuesta = Array.from(document.querySelectorAll(".texto"));
 const ans = document.getElementById("ttt");
 const puntaje = document.getElementById("puntaje");
 
-
 let preguntas = [
     {
         pregunta: '¿Como se llama el personaje que da vida al hombre con manos de tijeras?',
@@ -44,6 +43,7 @@ for (let i = 0; i < 4; i++) {
 } //escribir respuestas 1
 let y = 0;
 let x = 0;
+localStorage.setItem("puntaje", x);
 for (let j = 0; j < resp.length; j++) { //colorear
     respuesta[j].parentNode.addEventListener("click", function() {
         y = y + 1;
@@ -52,7 +52,6 @@ for (let j = 0; j < resp.length; j++) { //colorear
             respuesta[j].parentNode.style.background = "green";
             x = x + 20;
             localStorage.setItem("puntaje", x);
-            
         } else {
             respuesta[j].parentNode.style.background = "red";
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
@@ -74,7 +73,6 @@ for (let j = 0; j < resp.length; j++) { //colorear
             }
             pregunta.innerHTML = preguntas[y].pregunta;
             ans.style.pointerEvents = "auto";
-         
         }, 1000);
     })
 };

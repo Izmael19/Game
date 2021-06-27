@@ -3,8 +3,8 @@ const respuesta = Array.from(document.querySelectorAll(".texto"));
 const ans = document.getElementById("ttt");
 const puntaje = document.getElementById("puntaje");
 
-
-let preguntas = [{
+let preguntas = [
+    {
         pregunta: '¿Cuántos luchadores hay en Street Fighter II?',
         respuestas: ['12', '20', '6', '10'],
         correcta: 0,
@@ -49,12 +49,16 @@ for (let j = 0; j < resp.length; j++) { //colorear
         ans.style.pointerEvents = "none";
         if (j == preguntas[y-1].correcta) {
             respuesta[j].parentNode.style.background = "green";
-            x = x + 10;
+            x = x + 20;
+            localStorage.setItem("puntaje", x);
         } else {
             respuesta[j].parentNode.style.background = "red";
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "green";
         };
         setTimeout(function() { 
+            if (y==5) {
+                location="resultados.html";
+            }
             puntaje.innerHTML = x;
             respuesta[preguntas[y-1].correcta].parentNode.style.background = "";
             respuesta[j].parentNode.style.background = "";
